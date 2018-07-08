@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="keywords" content="School of Web, Web Education, Web Design Careers, Web Developer Careers, Web Career Opportunities">
+<meta name="description" content="The School of Web is an industry wide partnership initiative that aims to support careers in the Web profession.">
+<title>School of Web - Member Resources</title>
+<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+<link rel="shortcut icon" href="assets/images/favicon.png" />
+<script type="text/javascript" src="assets/javascript/slide_nav.js"></script>
+<script type="text/javascript" src="assets/javascript/validate.js"></script>
+</head>
+
+<body>
+
+<!-- nav wrapper extends across the page; onmouseout is for resetting the bubble that slides to navitems on hover -->
+<div id="nav_wrapper" onmouseout="slideNav(233, 205)">
+	<ul id="navbar">
+    	<!-- slidenav is absolute positioned and is repositioned with javascript when one of the navitems is moused over -->
+    	<li id="slidenav" style="left:233px;width:205px"></li>
+        <!-- the links to the pages -->
+    	<li id="home_link" class="navitem" onmouseover="slideNav(1, 90)"><a href="index.html">Home</a></li>
+        <li id="about_link" class="navitem" onmouseover="slideNav(113, 98)"><a href="about.html">About</a></li>
+        <li id="members_link" class="navitem onlink" onmouseover="slideNav(233, 205)"><a href="member_resources.html">Member resources</a></li>
+        <li id="contacts_link" class="navitem" onmouseover="slideNav(460, 124)"><a href="contacts.html">Contacts</a></li>
+    </ul>
+</div>
+
+<!-- wraps the content, allowing for a textured background that goes all the way across the page -->
+<div id="content_wrapper">
+    <div id="content" class="mem_res_content">
+    	<!-- the WebProfessionals.org logo that was provided -->
+    	<img src="assets/images/web_professionals_logo.png" width="254" height="50" alt="Web Professionals logo" id="web_prof_logo_lower" />
+        <!-- the logo we created for SchoolofWeb.org -->
+        <img src="assets/images/logo_for_web.jpg" width="600" height="136" alt="School of Web logo" />
+        
+        <h2>As a member of the SchoolofWeb.org you will have access to:</h2>
+		<ul>
+        	<li>Web design, Web development and Web business resources including educational content, custom curriculum and training resources covering advanced techniques, and the most up-to-date best practices and methods</li>
+			<li>Lesson plans for those that teach</li>
+			<li>How-to guides to establish a Web professional program at your school or college</li>
+			<li>Web professional directories</li>
+			<li>Web professional job boards</li>
+			<li>Web professional career guides</li>
+        </ul>
+        
+        <h2>Comments or Questions?</h2>
+        <form onsubmit="return validateCommentsForm()" onreset="resetCommentsForm()" action="#" id="comments_form">
+        	<div id="first_name_wrapper">
+                <label id="first_name_label" for="first_name">First name*</label><br />
+                <input type="text" id="first_name" tabindex="1" required="required" placeholder="Type your name" />
+            </div>
+            <div id="last_name_wrapper">
+                <label id="last_name_label" for="last_name">Last name*</label><br />
+                <input type="text" id="last_name" tabindex="2" required="required" placeholder="Type your last name" />
+            </div>
+            <div id="email_wrapper">
+                <label id="email_label" for="email">Email*</label><br />
+                <input type="email" id="email" tabindex="3" required="required" placeholder="Enter your email" />
+            </div>
+            <div id="demographic_wrapper">
+            	<label for="demographic">Demographic</label>
+                <select id="demographic" tabindex="4">
+                    <option value="none">(Optional)</option>
+                    <option value="student_or_parent">Student or Parent</option>
+                    <option value="educator">Educator</option>
+                    <option value="industry_affiliate">Industry Affiliate</option>
+                </select><br />
+            </div>
+            <div id="subject_wrapper">
+                <label id="subject_label" for="subject">Subject*</label><br />
+                <input type="text" id="subject" tabindex="5" required="required" placeholder="The subject of your inquiry" />
+            </div>
+            <div id="message_wrapper">
+            	<label id="message_label" for="message">Message*</label><br />
+                <textarea id="message" tabindex="6" required="required" placeholder="Your message" rows="8"></textarea>
+            </div>
+            <div id="buttons_wrapper">
+            	<input type="submit" tabindex="7" onclick="validateCommentsForm()" value="Submit" />
+                <input type="reset" tabindex="8" value="Reset" />
+                <span id="required_fields">Fields marked with an * are required</span>
+            </div>
+        </form>
+        
+    </div>
+</div>
+
+<!-- footer extends across the page, and appears to extend to the bottom because the body tag is colored the same. The footer also contains the copyright information -->
+<div id="footer_wrapper">
+	<div id="footer">
+    Copyright &copy; 2012 WebProfessionals.org
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Raleway|Roboto");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Custom
+@import 'navbar';
+@import 'content';
+@import 'footer';
+

@@ -1,0 +1,40 @@
+h1 {
+    font-size:2.5rem;
+    text-align:center;
+    padding:19px 0 30px 0;
+}
+h1#home {
+    font-size:1.5rem;
+}
+h2 {
+    font-size:1.875rem;
+}
+h2#tagline {
+    margin-top:60px;
+}
+h3 {
+    font-size:1.465rem;
+}
+ul.normalList li {
+    display:block;
+    list-style-type:bul;
+    font-family:'Raleway';
+}
+#services {
+    text-align:center;
+    div.row {
+        margin-bottom:30px;
+        div.col-sm-4 div, div.col-sm-6 {
+            padding: 15px;
+            border-radius: 4px;
+            i {
+                width: 100%;
+                color:rgb(51, 51, 51);
+            }
+            i.fa-sync-alt {
+                margin:7px 0;
+            }
+        }
+    }
+    
+}

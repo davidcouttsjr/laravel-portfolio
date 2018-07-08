@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+body { margin:0; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; }
+
+/* NAVBAR STYLES */
+
+/* extends all the way across the page, has the color/shadow background */
+#nav_wrapper
+{
+	width:100%;
+	height:46px;
+	background-image:url(../images/nav_bg.png);
+	background-repeat:repeat-x;
+	float:left;
+	position:fixed;
+	left:0;
+	top:0;
+}
+
+/* get rid of preset list styles that aren't useful in this context */
+#navbar, .navitem { margin:0; padding:0; list-style-type:none; }
+
+#navbar
+{
+	height:40px;
+	width:960px;
+	/* this is a reference for #slidenav, which is absolutely positioned */
+	position:relative;
+	margin:0 auto;
+	z-index:10;
+}
+/* block position these, pad the top, and hide the overflow on .navitem to remove the text but have it there to gracefully degrade */
+#navbar a
+{
+	display:block;
+	padding-top:30px;
+	width:100%;
+	float:left;
+}
+.navitem
+{
+	overflow:hidden;
+	margin:5px 20px 0 0;
+	float:left;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	z-index:20;
+	background-image:url(../images/sprite.png);
+	background-repeat:no-repeat;
+}
+/* give the link for the current page a rounded white background */
+.navitem.onlink
+{
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	background-color:#036;
+}
+/* position the sprite for the different links */
+#home_link
+{
+	width:92px;
+	background-position:0 -5px;
+}
+#about_link
+{
+	width:100px;
+	background-position:-92px -5px;
+}
+#members_link
+{
+	width:207px;
+	background-position:-192px -5px;
+}
+#contacts_link
+{
+	width:126px;
+	background-position:-399px -5px;
+}
+
+/* this slides out behind .onlink when the user hovers over the other links, by means of CSS3 transitions. If CSS3 isn't supported, there is no animation, but it still functions. The position is set by JavaScript in the .navitems' onmouseover attribute */
+#slidenav
+{
+	margin-top:5px;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	background:#cce6ff;
+	height:30px;
+	position:absolute;
+	z-index:-1;
+	transition:0.3s;
+	-moz-transition:0.3s;
+	-webkit-transition:0.3s;
+	-o-transition:0.3s;
+}
+/* END NAVBAR STYLES */
+
+
+
+/* CONTENT STYLES */
+
+/* content is also wrapped so that the wrapper can be floated left and be included in the spacing for the navbar and footer */
+#content_wrapper
+{
+	width:100%;
+	float:left;
+	background-color:#fff;
+	background-image:url(../images/background.png);
+}
+#web_prof_logo, #web_prof_logo_lower { float:right; }
+#web_prof_logo_lower { margin-top:20px; }
+#content
+{
+	padding:60px 0 30px 0;
+	width:960px;
+	margin:0 auto;
+	line-height:1.5em;
+	font-size:1.1em;
+	text-align:justify;
+	background-color:#fff;
+}
+#content a { color:#036; text-decoration:none; }
+#content a:hover { text-decoration:underline; }
+#content h1, #content h2, #content h3 { color:#036; }
+#content h3 { font-weight:normal; }
+#content li { list-style-image:url(../images/list_item.png); }
+#content ul { padding-left:20px; margin-left:0; }
+
+p.form_of_address
+{
+	font-size:1.3em;
+}
+p.address
+{
+	font-size:1.2em;
+	line-height:1.5em;
+	color:#036;
+}
+
+/* END CONTENT STYLES */
+
+
+
+/* FOOTER STYLES */
+
+/* footer also extends across the page, wrapped by this div */
+#footer_wrapper
+{
+	width:100%;
+	height:46px;
+	float:left;
+	background-color:#fff;
+	background-image:url(../images/footer_bg.png);
+	background-repeat:repeat-x;
+}
+#footer
+{
+	width:960px;
+	height:40px;
+	margin-top:6px;
+	margin:6px auto 0 auto;
+	text-align:center;
+	color:#fff;
+	line-height:40px;
+	font-size:1.1em;
+}
+/* to continue after the footer */
+body { background-color:#242424; }
+
+/* END FOOTER STYLES */
+
+
+
+/* FORM STYLES */
+
+.mem_res_content
+{
+	height:880px;
+}
+
+#first_name:focus, #last_name:focus, #email:focus, #subject:focus, #message:focus { background-color:#f1f8ff; }
+#comments_form { width:600px; float:left; }
+#comments_form > div { float:left; }
+#comments_form input, #comments_form textarea, #comments_form select
+{
+	font-size:1em;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#first_name_wrapper, #email_wrapper { margin-right:20px; }
+#first_name_wrapper, #last_name_wrapper, #email_wrapper, #demographic_wrapper { width:290px; height:75px;  }
+#first_name, #last_name, #email, #demographic  { width:290px; }
+
+#subject_wrapper { width:600px; height:80px; }
+#subject { width:600px; }
+
+#message_wrapper { width:600px; }
+#message { width:600px; height:100px; resize:none; }
+
+#buttons_wrapper { width:600px; height:80px; }
+#required_fields { float:right; }
+
+/* add icons */
+#first_name, #last_name, #email, #subject, #message
+{
+	transition:0.3s;
+	-moz-transition:0.3s;
+	-webkit-transition:0.3s;
+	-o-transition:0.3s;
+	background-repeat:no-repeat;
+}
+/* icons only appear on focus */
+#first_name
+{
+	background-image:url(../images/first_name_icon.png);
+	background-position:-15px center;
+	padding-left:0;
+}
+#first_name:focus
+{
+	background-position:5px center;
+	padding-left:30px;
+	width:260px;
+}
+#last_name
+{
+	background-image:url(../images/last_name_icon.png);
+	background-position:-15px center;
+	padding-left:0;
+}
+#last_name:focus
+{
+	background-position:5px center;
+	padding-left:30px;
+	width:260px;
+}
+#email
+{
+	background-image:url(../images/email_icon.png);
+	background-position:-30px center;
+	padding-left:0;
+}
+#email:focus
+{
+	background-position:5px center;
+	padding-left:45px;
+	width:245px;
+}
+#subject
+{
+	background-image:url(../images/subject_icon.png);
+	background-position:-34px center;
+	padding-left:0;
+}
+#subject:focus
+{
+	background-position:5px center;
+	padding-left:49px;
+	width:541px;
+}
+
+/* END FORM STYLES */
