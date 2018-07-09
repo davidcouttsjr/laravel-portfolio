@@ -7,22 +7,22 @@
     </h1>
     <div class="card card-body bg-light">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-lg-8">
                 <img class="img-fluid" src="img/mobile-friendly.png">
             </div>
-            <div class="col-sm-4">
+            <div class="col-lg-4">
                 <h2 class="mt-5">
-                    Fully responsive,<br>
-                    custom designed,<br>
-                    fantastically simple<br>
+                    Fully responsive,<br class="d-none d-lg">
+                    custom designed,<br class="d-none d-lg">
+                    fantastically simple<br class="d-none d-lg">
                     websites
                 </h2>
                 <a class="mt-4 btn btn-primary col-sm-7 offset-sm-1" href="/services">Learn More</a>
             </div>
         </div>
     </div>
-    <div class="row mt-4">
-        <div class="col-sm-4">
+    <div class="row">
+        <div class="col-lg-4 mt-4">
             <div class="card card-body bg-light">
                 <h3>Design and Development</h3>
                 <p>If you want a website or a completely new website, this is service for you.</p>
@@ -33,7 +33,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4 mt-4">
             <div class="card card-body bg-light">
                 <h3>Search Engine Optimization</h3>
                 <p>This is a great package for anyone struggling with getting people on their website.</p>
@@ -44,7 +44,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-lg-4 mt-4">
             <div class="card card-body bg-light">
                 <h3>
                     Website Refresh

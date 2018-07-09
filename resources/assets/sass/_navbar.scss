@@ -13,8 +13,22 @@ ul {
     }
 }
 nav {
-    // border-bottom:1px #f5f6f7 solid;
-    #slogan {
+    color:#222;
+    button {
+        height:50px;
+        span {
+            color: #222 !important;
+        }
+    }
+       
+    a {
+        text-decoration:none;
+        color:#222 !important;
+    }
+    a:hover {
+       text-decoration:none;
+    }
+    a#slogan {
         font-family:'oswald';
         font-size:1.5rem;
         line-height:1em;

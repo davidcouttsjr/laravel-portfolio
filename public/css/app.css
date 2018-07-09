@@ -10429,7 +10429,28 @@ ul li {
   font-size: 1.15rem;
 }
 
-nav #slogan {
+nav {
+  color: #222;
+}
+
+nav button {
+  height: 50px;
+}
+
+nav button span {
+  color: #222 !important;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222 !important;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+nav a#slogan {
   font-family: 'oswald';
   font-size: 1.5rem;
   line-height: 1em;
@@ -10487,6 +10508,41 @@ ul.normalList li {
 #services div.row div.col-sm-4 div i.fa-sync-alt,
 #services div.row div.col-sm-6 i.fa-sync-alt {
   margin: 7px 0;
+}
+
+section#work div.img-holder {
+  display: block !important;
+  height: 300px !important;
+  position: relative;
+  background-size: cover;
+}
+
+section#work a.img-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section#work a.img-link:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+section#work div#azfcu {
+  background-image: url("/img/arizonafederal.jpg");
+}
+
+section#work div#rio {
+  background-image: url("/img/riosalado.jpg");
+}
+
+section#work div#lhcca {
+  background-image: url("/img/lhcca.png");
+}
+
+section#work div#nat {
+  background-image: url("/img/nationals.png");
 }
 
 footer {
