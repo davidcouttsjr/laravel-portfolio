@@ -10454,7 +10454,32 @@ nav a#slogan {
   font-family: 'oswald';
   font-size: 1.5rem;
   line-height: 1em;
-  margin: 20px 0 15px 0;
+  margin: 15px;
+}
+
+@media (max-width: 991.98px) {
+  nav {
+    padding: 0 !important;
+  }
+
+  nav li {
+    width: 100%;
+    background-color: #4b4b4b;
+    border-bottom: 1px;
+  }
+
+  nav li a {
+    height: 100%;
+    padding: 3px;
+    display: block;
+    width: 100%;
+    color: #fff !important;
+    text-align: center;
+  }
+
+  nav li:hover {
+    background-color: #292929;
+  }
 }
 
 h1 {
@@ -10485,12 +10510,12 @@ ul.normalList li {
   font-family: 'Raleway';
 }
 
-#services {
-  text-align: center;
+.hide {
+  display: none;
 }
 
-#services div.row {
-  margin-bottom: 30px;
+#services {
+  text-align: center;
 }
 
 #services div.row div.col-sm-4 div,

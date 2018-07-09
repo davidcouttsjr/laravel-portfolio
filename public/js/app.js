@@ -13880,7 +13880,7 @@ module.exports = __webpack_require__(43);
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-
+__webpack_require__(48);
 __webpack_require__(13);
 
 window.Vue = __webpack_require__(36);
@@ -47382,6 +47382,27 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ (function(module, exports) {
+
+$(document).on('click', '.show', function () {
+    this.nextElementSibling.style.display = "block";
+    this.classList.remove('show');
+    this.classList.add('hideContent');
+    this.innerHTML = "Hide Contact Info";
+});
+$(document).on('click', '.hideContent', function () {
+    this.nextElementSibling.style.display = "none";
+    this.classList.remove('hideContent');
+    this.classList.add('show');
+    this.innerHTML = "Show Contact Info";
+});
 
 /***/ })
 /******/ ]);
